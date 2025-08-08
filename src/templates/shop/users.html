@@ -1,0 +1,8 @@
+{% include "navbar.html" %}
+
+<ul>
+    {% for usr in users %}
+        <li>{{ usr.name }} {{ usr.page }} {{ usr.phone }}</li>
+    {% endfor %}
+</ul>
+
