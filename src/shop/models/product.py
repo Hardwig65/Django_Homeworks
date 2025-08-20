@@ -22,3 +22,16 @@ class Product(models.Model):
     count_items = models.IntegerField(default=10)
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
+
+
+    provider = models.ForeignKey(to = 'Provider',
+                                 on_delete=models.SET_NULL,
+                                 related_name='products',
+                                 blank = True,
+                                 null=True)
+
+
+
+    def __str__(self):
+        return f'Name --> {self.name}, Price --> {self.price}$'
+

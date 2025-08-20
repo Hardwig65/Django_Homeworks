@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #helping apps
     'django_extensions',
-    'shop'
+    'shop',
+    'authentication'
 ]
 
 MIDDLEWARE = [
@@ -136,3 +137,7 @@ STATICFILES_DIRS = [
 # https://docs.djangoproject.com/en/5.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
+
+#authentication
+
+AUTH_USER_MODEL = 'authentication.CustomUser'
