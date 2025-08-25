@@ -12,7 +12,7 @@ class ProductOrder(models.Model):
         on_delete = models.CASCADE,
         related_name = 'product_order')
 
-    detail = models.CharField(max_length=50)
+    detail = models.CharField(max_length=50,null=True,blank=True)
 
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)

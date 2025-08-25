@@ -1,8 +1,8 @@
 from django.db import models
 
 class ProductDetail(models.Model):
-    height =models.FloatField()
-    weight =models.FloatField()
+    height =models.FloatField(null=True,blank=True)
+    weight =models.FloatField(null=True,blank=True)
     description = models.CharField(max_length=256)
 
     product = models.OneToOneField(
