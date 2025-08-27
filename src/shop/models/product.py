@@ -33,5 +33,5 @@ class Product(models.Model):
 
 
     def __str__(self):
-        return f'Name --> {self.name}, Price --> {self.price}$'
+        return f'{self.name} | {self.price}$'
 

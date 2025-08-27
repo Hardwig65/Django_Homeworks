@@ -1,5 +1,5 @@
 from django.db import models
-from django.conf import settings
+
 
 class ProductOrder(models.Model):
     product = models.ForeignKey(
@@ -25,4 +25,4 @@ class ProductOrder(models.Model):
         ]
 
     def __str__(self):
-        return f'{self.detail}'
+        return f'{self.order} | {self.product.name} '
