@@ -11,15 +11,15 @@ class ProductCategory(models.TextChoices):
     DEFAULT = 'DF', _("Default")
 
 class Product(models.Model):
-    name = models.CharField(max_length=30)
-    description = models.CharField(max_length=200, null=True,blank=True)
-    price = models.FloatField()
-    is_available = models.BooleanField(default=True)
+    name = models.CharField(max_length=30, verbose_name=_("Имя продукта"))
+    description = models.CharField(max_length=200, null=True,blank=True, verbose_name=_('Описание'))
+    price = models.FloatField(verbose_name='Цена')
+    is_available = models.BooleanField(default=True,verbose_name='Наличие')
     category = models.CharField(choices=ProductCategory,
-                                default=ProductCategory.DEFAULT)
-    rating = models.FloatField(null=True,blank=True)
-    photo = models.ImageField(null=True,blank=True)
-    count_items = models.IntegerField(default=10)
+                                default=ProductCategory.DEFAULT, verbose_name='Категория')
+    rating = models.FloatField(null=True,blank=True,verbose_name='Рейтинг')
+    photo = models.ImageField(null=True,blank=True,verbose_name='Фото')
+    count_items = models.IntegerField(default=10,verbose_name='Количество')
     created = models.DateTimeField(auto_now_add=True)
     updated = models.DateTimeField(auto_now=True)
 

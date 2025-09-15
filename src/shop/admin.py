@@ -1,6 +1,5 @@
 from django.contrib import admin
 from shop.models import (
-    Product,
     Order,
     Feedback,
     ProductDetail,
@@ -9,7 +8,6 @@ from shop.models import (
 )
 
 # Register your models here.
-admin.site.register(Product)
 admin.site.register(Order)
 admin.site.register(Feedback)
 admin.site.register(ProductDetail)

@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     #helping apps
     'django_extensions',
-    'shop',
+    'shop.apps.ShopConfig',
     'authentication'
 ]
 
